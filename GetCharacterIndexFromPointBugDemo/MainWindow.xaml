@@ -1,0 +1,23 @@
+﻿<Window x:Class="GetCharacterIndexFromPointBugDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GetCharacterIndexFromPointBugDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <TextBox IsReadOnly="True" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
+                     Text="THIS WORKS AS INTENDED." MouseMove="TextBox_MouseMove"/>
+            <TextBox IsReadOnly="True" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                     Text="BUT THIS DOES NOT WORK!" MouseMove="TextBox_MouseMove"/>
+            <TextBox IsReadOnly="True" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right"
+                     Text="NEITHER DOES THIS!" MouseMove="TextBox_MouseMove"/>
+            <TextBox IsReadOnly="True" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="800"
+                     Text="FIRST LINE OF THIS WILL WORK PARTIALLY                                                                                                                                               BUT ALAS, NOT THIS ONE!" MouseMove="TextBox_MouseMove"/>
+            <TextBlock Text="Hovered character:" />
+            <TextBlock Name="HoveredCharacterTextBlock" />
+        </StackPanel>
+    </Grid>
+</Window>
